@@ -26,9 +26,8 @@ contract MyToken is ERC20, Ownable {
     function transfer(address recipient, uint256 amount) public override returns (bool) {
         require((recipient.balance + amount) < getMaxWhaleAmount() || msg.sender == owner(), string(abi.encodePacked("Recipient balance will be higher than anti-whale limit (", uint2str(getMaxWhaleAmount()), " 42TOK)")));
         require(amount <= _maxWhaleAmount || msg.sender == owner(), "Transfer amount exceeds whale limit");
-        require(msg.sender.balance > amount + (amount * 1) / 100, "You don't have enough tokens to perform this operation."); // On s'assure que la personne qui envoie dispose de suffisament de jetons.
         uint256 reserveAmount = (amount * 1) / 100; // Calcul du montant à envoyer à la réserve (1%)
-        _transfer(msg.sender, recipient, amount); // Transfert au destinataire
+        _transfer(msg.sender, recipient, amount - reserveAmount); // Transfert au destinataire (moins le % envoyé à la réserve)
         _transfer(msg.sender, _reserveAddress, reserveAmount); // Transfert à la réserve
         return true;
     }
