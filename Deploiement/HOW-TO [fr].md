@@ -2,8 +2,10 @@
 
 ## Pré-requis :
 Google Chrome
-Extension Metamask (Deux comptes sont nécessaires)\n
-REMIX IDE - https://remix.ethereum.org\n
+
+Extension Metamask (Deux comptes sont nécessaires)
+
+REMIX IDE - https://remix.ethereum.org
 
 ## Obtention de sETH (Sepolia ETH) sur le réseau Sepolia Testnet :
 Créer un compte sur Alchemy : https://www.alchemy.com/
