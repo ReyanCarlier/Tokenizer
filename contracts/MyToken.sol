@@ -15,11 +15,11 @@ contract MyToken is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, E
     }
 
     function initialize(address initialOwner) initializer public {
-        __ERC20_init("MyToken", "MTK");
+        __ERC20_init("42TOKENIZER", "42TOK");
         __ERC20Burnable_init();
         __ERC20Pausable_init();
         __Ownable_init(initialOwner);
-        __ERC20Permit_init("MyToken");
+        __ERC20Permit_init("42TOKENIZER");
     }
 
     function pause() public onlyOwner {
