@@ -1,21 +1,18 @@
 # Procédure de déploiement de 42TOK sur Sepolia Testnet
 
 ## Pré-requis :
-
 Google Chrome
 Extension Metamask (Deux comptes sont nécessaires)
 REMIX IDE - https://remix.ethereum.org
 
 ## Obtention de sETH (Sepolia ETH) sur le réseau Sepolia Testnet :
-
 Créer un compte sur Alchemy : https://www.alchemy.com/
 Accéder au Faucet de Sepolia : https://sepoliafaucet.com/
-Réaliser la demande d'ETH (0.5) vers le wallet Metamask créé plus tôt
+Réaliser la demande d'ETH (0.5) vers le wallet Metamask créé plus tôt.
 
 ## Création du Smart Contract
 
 ### Mise en place
-
 Cloner le repertoire de 42TOK (ou fork le projet et se connecter à Github sur Remix)
 Accéder à REMIX : https://remix.ethereum.org
 Importer le code dans REMIX
